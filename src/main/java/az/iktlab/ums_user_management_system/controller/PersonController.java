@@ -18,20 +18,21 @@ public class PersonController {
 
     @GetMapping
     public List<PersonDto> getAll() {
-        return null;
+        return service.getAll();
     }
 
     @GetMapping("/id/{id}")
     public PersonDto findById(@PathVariable Long id) {
-        return null;
+        return service.findById(id);
     }
 
     @PostMapping
     public void save(@RequestBody PersonDto person) {
-
+            service.save(person);
     }
 
     @PutMapping
     public void update(@RequestBody PersonDto person) {
+        service.update(person);
     }
 }
