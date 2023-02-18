@@ -10,29 +10,29 @@ import java.util.List;
 @RequestMapping("/person")
 public class PersonController {
 
-    private final PersonService service;
-
-    public PersonController(PersonService service) {
-        this.service = service;
-    }
-
-    @GetMapping
-    public List<PersonDto> getAll() {
-        return service.getAll();
-    }
-
-    @GetMapping("/id/{id}")
-    public PersonDto findById(@PathVariable Long id) {
-        return service.findById(id);
-    }
-
-    @PostMapping
-    public void save(@RequestBody PersonDto person) {
-            service.save(person);
-    }
-
-    @PutMapping
-    public void update(@RequestBody PersonDto person) {
-        service.update(person);
-    }
+//    private final PersonService service;
+//
+//    public PersonController(PersonService service) {
+//        this.service = service;
+//    }
+//
+//    @GetMapping
+//    public List<PersonDto> getAll() {
+//        return service.getAll();
+//    }
+//
+//    @GetMapping("/id/{id}")
+//    public PersonDto findById(@PathVariable Long id) {
+//        return service.findById(id);
+//    }
+//
+//    @PostMapping
+//    public void save(@RequestBody PersonDto person) {
+//            service.save(person);
+//    }
+//
+//    @PutMapping
+//    public void update(@RequestBody PersonDto person) {
+//        service.update(person);
+//    }
 }
